@@ -7,6 +7,9 @@ import { Cursos } from './Pages/Cursos';
 import { EnConstruccion } from './Pages/EnConstruccion';
 import { Horario } from './Pages/Horario';
 import { InfoAcademica } from './Pages/InfoAcademica';
+import { Publicacion } from './Pages/Publicacion';
+import { Tarea } from './Pages/Tarea';
+import { Tareas } from './Pages/Tareas';
 
 /** Rutas del portal. Cada página se monta dentro de MainLayout. */
 const paginas = [
@@ -14,7 +17,6 @@ const paginas = [
   { ruta: '/oferta-educativa', titulo: 'Oferta Educativa' },
   { ruta: '/universidad', titulo: 'Universidad' },
   { ruta: '/investigacion', titulo: 'Investigación' },
-  { ruta: '/tareas', titulo: 'Tareas' },
 ];
 
 export default function App() {
@@ -28,6 +30,9 @@ export default function App() {
             <Route path="/horario" element={<Horario />} />
             <Route path="/cursos" element={<Cursos />} />
             <Route path="/cursos/:id" element={<Curso />} />
+            <Route path="/cursos/:id/anuncios/:anuncioId" element={<Publicacion />} />
+            <Route path="/tareas" element={<Tareas />} />
+            <Route path="/tareas/:id" element={<Tarea />} />
             {paginas.map((p) => (
               <Route key={p.ruta} path={p.ruta} element={<EnConstruccion titulo={p.titulo} />} />
             ))}

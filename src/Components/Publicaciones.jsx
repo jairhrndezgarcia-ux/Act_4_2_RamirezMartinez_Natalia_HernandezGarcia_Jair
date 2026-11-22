@@ -56,12 +56,12 @@ export function PublicacionTarea({ fecha, titulo, cierre, ruta }) {
  * @param {string} props.texto - Contenido del anuncio.
  * @param {string[]} [props.imagenes] - URLs de imágenes adjuntas.
  * @param {number} [props.marcadores] - Cantidad de imágenes de ejemplo a mostrar si no hay URLs.
+ * @param {string} [props.ruta] - Si se da, todo el anuncio es un enlace a su página.
  */
-export function PublicacionAnuncio({ profesor, fecha, texto, imagenes = [], marcadores = 0 }) {
+export function PublicacionAnuncio({ profesor, fecha, texto, imagenes = [], marcadores = 0, ruta }) {
   const total = imagenes.length || marcadores;
-
-  return (
-    <article className="flex w-full flex-col gap-3.5 px-2.5 py-1.25">
+  const contenido = (
+    <>
       <EncabezadoPublicacion icono="avatar-profesor" titulo={profesor} fecha={fecha} />
       <p className="text-xs text-negro-fondo dark:text-blanco-primario">{texto}</p>
       {total > 0 && (
@@ -73,6 +73,18 @@ export function PublicacionAnuncio({ profesor, fecha, texto, imagenes = [], marc
               ))}
         </div>
       )}
-    </article>
+    </>
   );
+
+  if (ruta) {
+    return (
+      <article className="w-full">
+        <Link to={ruta} className="flex w-full flex-col gap-3.5 px-2.5 py-1.25 hover:bg-gris-claro/40 dark:hover:bg-gris-oscuro/40">
+          {contenido}
+        </Link>
+      </article>
+    );
+  }
+
+  return <article className="flex w-full flex-col gap-3.5 px-2.5 py-1.25">{contenido}</article>;
 }

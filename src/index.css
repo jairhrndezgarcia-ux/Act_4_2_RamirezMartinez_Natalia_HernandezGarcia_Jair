@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+
+  --Negro-Fondo: #121212;
+  --Negro-Primario: #171717;
+  --Blanco-Primario: #FFFFFF;
+  --Blanco-FOndo: #FAFAFA;
+  --Gris-Oscuro: #333333;
+  --Gris-Para-Texto: #9CA3AF;
+  --Gris-Primario: #D1D5DB;
+  --Gris-Claro: #E5E7EB;
+  --Rojo-Error: #B91C1C;
+  --Azul-Enlance: #1C77C3;
+  
+}

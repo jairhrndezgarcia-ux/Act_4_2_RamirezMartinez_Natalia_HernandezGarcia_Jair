@@ -1,9 +1,17 @@
+import { useState } from 'react';
+import { MainLayout } from './Layout/MainLayout';
+
 export default function App() {
+  const [seccion, setSeccion] = useState('inicio');
+
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <h1 className="text-2xl font-bold text-blue-900">
-        Dashboard de Monitoreo - UASLP
+    <MainLayout seccionActiva={seccion} onCambiarSeccion={setSeccion}>
+      <h1 className="text-2xl font-bold text-primario capitalize">
+        Vista: {seccion}
       </h1>
-    </div>
-  )
+      <p className="mt-2 text-gray-600">
+        Aquí iremos colocando las tarjetas, gráficas y tablas del diseño asignado.
+      </p>
+    </MainLayout>
+  );
 }

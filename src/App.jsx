@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router';
 import { TemaProvider } from './Context/TemaContext';
 import { MainLayout } from './Layout/MainLayout';
+import { Calificaciones } from './Pages/Calificaciones';
 import { EnConstruccion } from './Pages/EnConstruccion';
 import { InfoAcademica } from './Pages/InfoAcademica';
 
@@ -11,7 +12,6 @@ const paginas = [
   { ruta: '/universidad', titulo: 'Universidad' },
   { ruta: '/investigacion', titulo: 'Investigación' },
   { ruta: '/horario', titulo: 'Horario' },
-  { ruta: '/calificaciones', titulo: 'Calificaciones' },
   { ruta: '/cursos', titulo: 'Cursos' },
   { ruta: '/tareas', titulo: 'Tareas' },
 ];
@@ -23,6 +23,7 @@ export default function App() {
         <Routes>
           <Route element={<MainLayout />}>
             <Route path="/info-academica" element={<InfoAcademica />} />
+            <Route path="/calificaciones" element={<Calificaciones />} />
             {paginas.map((p) => (
               <Route key={p.ruta} path={p.ruta} element={<EnConstruccion titulo={p.titulo} />} />
             ))}

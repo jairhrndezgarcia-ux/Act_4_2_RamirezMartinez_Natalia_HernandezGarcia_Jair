@@ -24,9 +24,9 @@ export function TarjetaAlumno({ alumno, foto }) {
   return (
     <section
       aria-label="Datos del alumno"
-      className="flex flex-wrap items-center justify-center gap-2 py-[5px]"
+      className="flex flex-wrap items-center justify-center gap-2 py-1.25"
     >
-      <div className="flex size-[100px] shrink-0 items-center justify-center bg-gris-claro lg:size-[200px] dark:bg-gris-texto">
+      <div className="flex size-25 shrink-0 items-center justify-center bg-gris-claro lg:size-50 dark:bg-gris-texto">
         {foto ? (
           <img src={foto} alt={`Foto de ${alumno.nombre}`} className="size-full object-cover" />
         ) : (

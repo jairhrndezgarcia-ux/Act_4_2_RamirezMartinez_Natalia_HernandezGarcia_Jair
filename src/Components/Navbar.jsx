@@ -17,9 +17,9 @@ import { PanelNotificaciones } from './PanelNotificaciones';
  */
 export function Navbar({ enlaces, notificaciones }) {
   return (
-    <header className="sticky top-0 z-40 bg-blanco-fondo pt-[13px] dark:bg-negro-fondo">
+    <header className="sticky top-0 z-40 bg-blanco-fondo pt-3.25 dark:bg-negro-fondo">
       {/* Móvil */}
-      <div className="flex h-[42px] items-center justify-between px-2.5 py-[5px] md:hidden">
+      <div className="flex h-10.5 items-center justify-between px-2.5 py-1.25 md:hidden">
         <Logo />
         <BotonTema />
         <PanelNotificaciones notificaciones={notificaciones} />
@@ -27,7 +27,7 @@ export function Navbar({ enlaces, notificaciones }) {
       </div>
 
       {/* Tablet y escritorio */}
-      <div className="hidden h-12 items-center justify-between pr-2.5 pl-[15px] md:flex">
+      <div className="hidden h-12 items-center justify-between pr-2.5 pl-3.75 md:flex">
         <Logo />
         <div className="flex items-center">
           <nav aria-label="Menú principal" className="flex items-center">
@@ -36,7 +36,7 @@ export function Navbar({ enlaces, notificaciones }) {
                 key={enlace.id}
                 to={enlace.ruta}
                 end={enlace.ruta === '/'}
-                className="flex h-12 items-center pr-[22px] pl-[14px] text-sm whitespace-nowrap text-negro-primario hover:bg-gris-claro aria-[current=page]:font-bold dark:text-blanco-primario dark:hover:bg-gris-oscuro"
+                className="flex h-12 items-center pr-5.5 pl-3.5 text-sm whitespace-nowrap text-negro-primario hover:bg-gris-claro aria-[current=page]:font-bold dark:text-blanco-primario dark:hover:bg-gris-oscuro"
               >
                 {enlace.etiqueta}
               </NavLink>
@@ -60,7 +60,7 @@ function Logo() {
         <Icono nombre="logo-buho-movil" className="size-8" />
       </span>
       <span className="hidden items-center gap-px lg:flex">
-        <Icono nombre="logo-buho" className="size-[25px]" />
+        <Icono nombre="logo-buho" className="size-6.25" />
         <span className="font-mono text-sm font-bold whitespace-nowrap text-negro-primario dark:text-blanco-primario">
           Universidad Autónoma Los Búhos
         </span>

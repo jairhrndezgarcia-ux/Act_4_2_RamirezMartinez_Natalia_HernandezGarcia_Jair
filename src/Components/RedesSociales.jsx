@@ -19,10 +19,10 @@ export function RedesSociales({
   instagram = 'https://www.instagram.com/',
   youtube = 'https://www.youtube.com/',
 }) {
-  const enlace = 'block h-[26px] w-[30px] shrink-0 overflow-clip';
+  const enlace = 'block h-6.5 w-7.5 shrink-0 overflow-clip';
 
   return (
-    <div className="flex items-start gap-[11px] self-stretch">
+    <div className="flex items-start gap-2.75 self-stretch">
       <a href={facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className={`relative bg-negro-primario dark:bg-blanco-primario ${enlace}`}>
         <IconoFacebook fondo={fbFondoClaro} letra={fbLetraClaro} className="dark:hidden" />
         <IconoFacebook fondo={fbFondoOscuro} letra={fbLetraOscuro} className="hidden dark:block" />

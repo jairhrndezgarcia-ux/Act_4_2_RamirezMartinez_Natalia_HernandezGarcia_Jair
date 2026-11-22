@@ -39,17 +39,17 @@ export function PanelNotificaciones({ notificaciones, onSeleccionar, onVerTodo }
         <div
           role="dialog"
           aria-label="Menú de notificaciones"
-          className="fixed top-[52px] left-1/2 z-50 flex w-[348px] max-w-[calc(100vw-16px)] -translate-x-1/2 flex-col border border-negro-primario bg-blanco-fondo md:absolute md:top-full md:right-0 md:left-auto md:mt-3 md:translate-x-0 dark:border-blanco-primario dark:bg-negro-fondo"
+          className="fixed top-13 left-1/2 z-50 flex w-87 max-w-[calc(100vw-16px)] -translate-x-1/2 flex-col border border-negro-primario bg-blanco-fondo md:absolute md:top-full md:right-0 md:left-auto md:mt-3 md:translate-x-0 dark:border-blanco-primario dark:bg-negro-fondo"
         >
           <div className="flex items-center justify-between p-px">
             <p className="text-xs text-negro-fondo dark:text-blanco-primario">Notificaciones</p>
-            <div className="flex items-center gap-[9px]">
+            <div className="flex items-center gap-2.25">
               <Icono nombre="verificacion" className="size-3" alt="Marcar como leídas" />
               <Icono nombre="configuracion" className="size-3" alt="Configuración" />
             </div>
           </div>
 
-          <ul className="h-[246px] overflow-x-clip overflow-y-auto">
+          <ul className="h-61.5 overflow-x-clip overflow-y-auto">
             {notificaciones.map((n) => (
               <li key={n.id}>
                 <Link
@@ -58,12 +58,12 @@ export function PanelNotificaciones({ notificaciones, onSeleccionar, onVerTodo }
                     onSeleccionar?.(n.id);
                     cerrar();
                   }}
-                  className="flex w-full items-start gap-[7px] p-[5px] hover:bg-gris-claro dark:hover:bg-gris-oscuro"
+                  className="flex w-full items-start gap-1.75 p-1.25 hover:bg-gris-claro dark:hover:bg-gris-oscuro"
                 >
-                  <span className="flex size-12 shrink-0 items-center justify-center rounded-[5px] bg-gris-primario p-[5px] dark:bg-gris-oscuro">
+                  <span className="flex size-12 shrink-0 items-center justify-center rounded-[5px] bg-gris-primario p-1.25 dark:bg-gris-oscuro">
                     <Icono nombre={n.tipo === 'tarea' ? 'asignacion' : 'perfil'} className="size-full" />
                   </span>
-                  <span className="grid min-w-0 flex-1 grid-cols-2 gap-x-[5px] gap-y-[3px] text-left">
+                  <span className="grid min-w-0 flex-1 grid-cols-2 gap-x-1.25 gap-y-0.75 text-left">
                     <span className="col-span-2 text-xs text-negro-fondo dark:text-blanco-primario">
                       {n.autor}
                     </span>
@@ -81,7 +81,7 @@ export function PanelNotificaciones({ notificaciones, onSeleccionar, onVerTodo }
             ))}
           </ul>
 
-          <div className="flex h-[25px] items-center justify-center p-2.5">
+          <div className="flex h-6.25 items-center justify-center p-2.5">
             <button
               type="button"
               onClick={() => {

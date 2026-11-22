@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 import { TemaProvider } from './Context/TemaContext';
 import { MainLayout } from './Layout/MainLayout';
 import { EnConstruccion } from './Pages/EnConstruccion';
+import { InfoAcademica } from './Pages/InfoAcademica';
 
 /** Rutas del portal. Cada página se monta dentro de MainLayout. */
 const paginas = [
@@ -9,7 +10,6 @@ const paginas = [
   { ruta: '/oferta-educativa', titulo: 'Oferta Educativa' },
   { ruta: '/universidad', titulo: 'Universidad' },
   { ruta: '/investigacion', titulo: 'Investigación' },
-  { ruta: '/info-academica', titulo: 'Información Académica' },
   { ruta: '/horario', titulo: 'Horario' },
   { ruta: '/calificaciones', titulo: 'Calificaciones' },
   { ruta: '/cursos', titulo: 'Cursos' },
@@ -22,6 +22,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<MainLayout />}>
+            <Route path="/info-academica" element={<InfoAcademica />} />
             {paginas.map((p) => (
               <Route key={p.ruta} path={p.ruta} element={<EnConstruccion titulo={p.titulo} />} />
             ))}

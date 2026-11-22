@@ -1,16 +1,28 @@
 @import "tailwindcss";
 
-@theme {
+/* El modo oscuro se activa con la clase .dark en <html> (ver TemaContext). */
+@custom-variant dark (&:where(.dark, .dark *));
 
-  --Negro-Fondo: #121212;
-  --Negro-Primario: #171717;
-  --Blanco-Primario: #FFFFFF;
-  --Blanco-FOndo: #FAFAFA;
-  --Gris-Oscuro: #333333;
-  --Gris-Para-Texto: #9CA3AF;
-  --Gris-Primario: #D1D5DB;
-  --Gris-Claro: #E5E7EB;
-  --Rojo-Error: #B91C1C;
-  --Azul-Enlance: #1C77C3;
-  
+@theme {
+  /* Tipografía (Figma: Fuentes) */
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, monospace;
+
+  /* Paleta base (Figma: Colores) */
+  --color-negro-fondo: #121212;
+  --color-negro-primario: #171717;
+  --color-blanco-primario: #FFFFFF;
+  --color-blanco-fondo: #FAFAFA;
+  --color-gris-oscuro: #333333;
+  --color-gris-texto: #9CA3AF;
+  --color-gris-primario: #D1D5DB;
+  --color-gris-claro: #E5E7EB;
+  --color-rojo-error: #B91C1C;
+  --color-azul-enlace: #1C77C3;
+}
+
+@layer base {
+  body {
+    @apply bg-blanco-fondo font-sans text-negro-primario dark:bg-negro-fondo dark:text-blanco-primario;
+  }
 }

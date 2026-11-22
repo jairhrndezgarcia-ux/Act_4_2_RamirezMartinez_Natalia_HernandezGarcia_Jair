@@ -1,17 +1,34 @@
-import { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router';
+import { TemaProvider } from './Context/TemaContext';
 import { MainLayout } from './Layout/MainLayout';
+import { EnConstruccion } from './Pages/EnConstruccion';
+
+/** Rutas del portal. Cada página se monta dentro de MainLayout. */
+const paginas = [
+  { ruta: '/', titulo: 'Inicio' },
+  { ruta: '/oferta-educativa', titulo: 'Oferta Educativa' },
+  { ruta: '/universidad', titulo: 'Universidad' },
+  { ruta: '/investigacion', titulo: 'Investigación' },
+  { ruta: '/info-academica', titulo: 'Información Académica' },
+  { ruta: '/horario', titulo: 'Horario' },
+  { ruta: '/calificaciones', titulo: 'Calificaciones' },
+  { ruta: '/cursos', titulo: 'Cursos' },
+  { ruta: '/tareas', titulo: 'Tareas' },
+];
 
 export default function App() {
-  const [seccion, setSeccion] = useState('inicio');
-
   return (
-    <MainLayout seccionActiva={seccion} onCambiarSeccion={setSeccion}>
-      <h1 className="text-2xl font-bold text-primario capitalize">
-        Vista: {seccion}
-      </h1>
-      <p className="mt-2 text-gray-600">
-        Aquí iremos colocando las tarjetas, gráficas y tablas del diseño asignado.
-      </p>
-    </MainLayout>
+    <TemaProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<MainLayout />}>
+            {paginas.map((p) => (
+              <Route key={p.ruta} path={p.ruta} element={<EnConstruccion titulo={p.titulo} />} />
+            ))}
+            <Route path="*" element={<EnConstruccion titulo="Página no encontrada" />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </TemaProvider>
   );
 }

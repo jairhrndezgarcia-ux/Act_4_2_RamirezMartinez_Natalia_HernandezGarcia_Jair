@@ -29,7 +29,7 @@ export function PanelNotificaciones({ notificaciones, onSeleccionar, onVerTodo }
         onClick={() => setAbierto((a) => !a)}
         aria-label="Notificaciones"
         aria-expanded={abierto}
-        aria-haspopup="true"
+        aria-haspopup="dialog"
         className="cursor-pointer"
       >
         <Icono nombre="notificaciones" />

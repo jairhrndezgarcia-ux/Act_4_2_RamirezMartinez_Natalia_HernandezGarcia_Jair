@@ -39,6 +39,7 @@ export function MenuMovil({ enlaces }) {
             <NavLink
               key={enlace.id}
               to={enlace.ruta}
+              end={enlace.ruta === '/'}
               onClick={cerrar}
               className="flex h-8 w-full items-center justify-end bg-blanco-fondo pr-[22px] pl-[14px] text-sm text-negro-primario hover:bg-gris-claro aria-[current=page]:font-bold dark:bg-negro-fondo dark:text-blanco-primario dark:hover:bg-gris-oscuro"
             >

@@ -7,7 +7,7 @@ export const enlacesPrincipales = [
   { id: 'oferta', etiqueta: 'Oferta Educativa', ruta: '/oferta-educativa' },
   { id: 'universidad', etiqueta: 'Universidad', ruta: '/universidad' },
   { id: 'investigacion', etiqueta: 'Investigación', ruta: '/investigacion' },
-  { id: 'info', etiqueta: 'Información Academica', ruta: '/info-academica' },
+  { id: 'info', etiqueta: 'Información Académica', ruta: '/info-academica' },
 ];
 
 /**
@@ -15,7 +15,7 @@ export const enlacesPrincipales = [
  * @type {{ id: string, etiqueta: string, ruta: string, icono: string }[]}
  */
 export const enlacesPie = [
-  { id: 'info', etiqueta: 'Información Academica', ruta: '/info-academica', icono: 'horario' },
+  { id: 'info', etiqueta: 'Información Académica', ruta: '/info-academica', icono: 'horario' },
   { id: 'oferta', etiqueta: 'Oferta Educativa', ruta: '/oferta-educativa', icono: 'lupa' },
   { id: 'universidad', etiqueta: 'Universidad', ruta: '/universidad', icono: 'calificaciones' },
   { id: 'investigacion', etiqueta: 'Investigación', ruta: '/investigacion', icono: 'informacion' },
@@ -24,7 +24,7 @@ export const enlacesPie = [
 /** Datos de contacto mostrados en el pie de página. */
 export const contacto = [
   'Universidad Autónoma Los Búhos',
-  'Sebastían Lerdo de Tejada. CP 78436',
+  'Sebastián Lerdo de Tejada. CP 78436',
   'San Luis Potosí, SLP',
   '444 145 89 45',
   '©2026 Todos los derechos reservados',

@@ -11,15 +11,15 @@ export function InfoAcademica() {
   const filas = [seccionesAcademicas.slice(0, 2), seccionesAcademicas.slice(2, 4)];
 
   return (
-    <div className="flex flex-col items-center px-4 pt-[11px] pb-5 lg:px-0">
+    <div className="flex flex-col items-center px-4 pt-2.75 pb-5 lg:px-0">
       <h1 className="text-2xl font-bold lg:text-[33px] lg:font-normal">Información Académica</h1>
 
-      <div className="mt-[11px] flex w-full flex-col items-center gap-5 py-5 max-lg:pt-0">
+      <div className="mt-2.75 flex w-full flex-col items-center gap-5 py-5 max-lg:pt-0">
         <TarjetaAlumno alumno={alumno} />
 
-        <nav aria-label="Secciones académicas" className="flex w-full flex-col items-center gap-1 lg:gap-[50px]">
+        <nav aria-label="Secciones académicas" className="flex w-full flex-col items-center gap-1 lg:gap-12.5">
           {filas.map((fila, i) => (
-            <div key={i} className="flex w-full flex-wrap items-start justify-center gap-[60px] max-sm:gap-6 py-10 max-sm:py-3">
+            <div key={i} className="flex w-full flex-wrap items-start justify-center gap-15 max-sm:gap-6 py-10 max-sm:py-3">
               {fila.map((s) => (
                 <BotonAcceso key={s.id} ruta={s.ruta} icono={s.icono} etiqueta={s.etiqueta} />
               ))}

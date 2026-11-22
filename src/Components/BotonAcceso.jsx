@@ -15,7 +15,7 @@ export function BotonAcceso({ ruta, icono, etiqueta }) {
   return (
     <Link
       to={ruta}
-      className="flex h-14 w-[250px] shrink-0 items-center justify-center gap-1.5 border border-negro-fondo bg-blanco-fondo pr-[22px] pl-[14px] text-2xl whitespace-nowrap text-negro-primario hover:bg-gris-claro lg:h-[120px] dark:border-blanco-primario dark:bg-negro-fondo dark:text-blanco-primario dark:hover:bg-gris-oscuro"
+      className="flex h-14 w-62.5 shrink-0 items-center justify-center gap-1.5 border border-negro-fondo bg-blanco-fondo pr-5.5 pl-3.5 text-2xl whitespace-nowrap text-negro-primario hover:bg-gris-claro lg:h-30 dark:border-blanco-primario dark:bg-negro-fondo dark:text-blanco-primario dark:hover:bg-gris-oscuro"
     >
       <Icono nombre={icono} />
       {etiqueta}

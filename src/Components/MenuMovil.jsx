@@ -33,7 +33,7 @@ export function MenuMovil({ enlaces }) {
         <nav
           id="menu-movil"
           aria-label="Menú principal"
-          className="absolute top-full right-0 z-50 mt-[5px] flex w-[250px] flex-col shadow-md"
+          className="absolute top-full right-0 z-50 mt-1.25 flex w-62.5 flex-col shadow-md"
         >
           {enlaces.map((enlace) => (
             <NavLink
@@ -41,7 +41,7 @@ export function MenuMovil({ enlaces }) {
               to={enlace.ruta}
               end={enlace.ruta === '/'}
               onClick={cerrar}
-              className="flex h-8 w-full items-center justify-end bg-blanco-fondo pr-[22px] pl-[14px] text-sm text-negro-primario hover:bg-gris-claro aria-[current=page]:font-bold dark:bg-negro-fondo dark:text-blanco-primario dark:hover:bg-gris-oscuro"
+              className="flex h-8 w-full items-center justify-end bg-blanco-fondo pr-5.5 pl-3.5 text-sm text-negro-primario hover:bg-gris-claro aria-[current=page]:font-bold dark:bg-negro-fondo dark:text-blanco-primario dark:hover:bg-gris-oscuro"
             >
               {enlace.etiqueta}
             </NavLink>

@@ -14,13 +14,13 @@ import { RedesSociales } from './RedesSociales';
 export function Footer({ enlaces, contacto }) {
   return (
     <footer className="bg-gris-claro pt-2.5 dark:bg-gris-oscuro">
-      <div className="flex flex-wrap items-end justify-between gap-y-[30px] bg-blanco-fondo px-[21px] py-8 dark:bg-negro-fondo">
-        <nav aria-label="Enlaces del pie de página" className="flex w-[189px] flex-col">
+      <div className="flex flex-wrap items-end justify-between gap-y-7.5 bg-blanco-fondo px-5.25 py-8 dark:bg-negro-fondo">
+        <nav aria-label="Enlaces del pie de página" className="flex w-47.25 flex-col">
           {enlaces.map((enlace) => (
             <Link
               key={enlace.id}
               to={enlace.ruta}
-              className="flex h-11 w-full items-center gap-1.5 pr-[22px] pl-[14px] text-sm whitespace-nowrap text-negro-primario hover:bg-gris-claro dark:text-blanco-primario dark:hover:bg-gris-oscuro"
+              className="flex h-11 w-full items-center gap-1.5 pr-5.5 pl-3.5 text-sm whitespace-nowrap text-negro-primario hover:bg-gris-claro dark:text-blanco-primario dark:hover:bg-gris-oscuro"
             >
               <Icono nombre={enlace.icono} />
               {enlace.etiqueta}
@@ -28,7 +28,7 @@ export function Footer({ enlaces, contacto }) {
           ))}
         </nav>
 
-        <div className="flex w-[189px] flex-col items-start gap-[9px] pl-[15px]">
+        <div className="flex w-47.25 flex-col items-start gap-2.25 pl-3.75">
           <RedesSociales />
           <address className="text-base text-negro-fondo not-italic dark:text-blanco-primario">
             {contacto.map((linea) => (

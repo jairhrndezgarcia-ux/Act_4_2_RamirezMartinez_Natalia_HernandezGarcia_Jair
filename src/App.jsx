@@ -6,14 +6,15 @@ import { Curso } from './Pages/Curso';
 import { Cursos } from './Pages/Cursos';
 import { EnConstruccion } from './Pages/EnConstruccion';
 import { Horario } from './Pages/Horario';
+import { Inicio } from './Pages/Inicio';
 import { InfoAcademica } from './Pages/InfoAcademica';
+import { Login } from './Pages/Login';
 import { Publicacion } from './Pages/Publicacion';
 import { Tarea } from './Pages/Tarea';
 import { Tareas } from './Pages/Tareas';
 
 /** Rutas del portal. Cada página se monta dentro de MainLayout. */
 const paginas = [
-  { ruta: '/', titulo: 'Inicio' },
   { ruta: '/oferta-educativa', titulo: 'Oferta Educativa' },
   { ruta: '/universidad', titulo: 'Universidad' },
   { ruta: '/investigacion', titulo: 'Investigación' },
@@ -25,6 +26,8 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<MainLayout />}>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/info-academica" element={<InfoAcademica />} />
             <Route path="/calificaciones" element={<Calificaciones />} />
             <Route path="/horario" element={<Horario />} />

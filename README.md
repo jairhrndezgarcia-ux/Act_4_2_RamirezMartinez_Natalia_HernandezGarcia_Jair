@@ -18,17 +18,8 @@ su información académica, sus calificaciones, su horario, sus cursos y sus tar
 | [Vitest](https://vitest.dev) + [Testing Library](https://testing-library.com) | Pruebas de componentes |
 | [Oxlint](https://oxc.rs) | Revisión de código |
 
-### ¿Por qué React y no Vue?
-
-La actividad sugiere Vue.js como ejemplo. Nosotros usamos **React**, que cumple los mismos objetivos:
-
-- **Componentes reutilizables y modulares:** cada pieza del diseño (botón, tabla, tarjeta, campo) es un componente en `src/Components`.
-- **Estilo y lógica encapsulados:** cada componente define sus propios estilos con clases de Tailwind y maneja su propio estado (por ejemplo, el menú móvil sabe si está abierto).
-- **Props y eventos:** los componentes reciben datos por *props* y avisan los cambios con funciones como `onCambiar` u `onEntregar`, igual que los `props` y `emit` de Vue.
 
 ## Cómo correr el proyecto
-
-Necesitas [Node.js](https://nodejs.org) 20 o superior.
 
 ```bash
 npm install        # instala dependencias

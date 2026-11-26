@@ -43,9 +43,6 @@ npm run build      # genera la versión de producción en dist/
 npm run preview    # sirve la versión de producción para revisarla
 ```
 
-> **Tip:** el inicio de sesión es simulado. Usa cualquier semestre, una clave de 6 o más dígitos
-> (por ejemplo `0783421`) y cualquier contraseña.
-
 ---
 
 ## Tecnologías

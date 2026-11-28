@@ -1,11 +1,11 @@
 import { screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it } from 'vitest';
-import { Curso } from '../Pages/Curso';
-import { Login } from '../Pages/Login';
-import { Tarea } from '../Pages/Tarea';
-import { Tareas } from '../Pages/Tareas';
-import { tareas } from '../Data/tareas';
+import { Curso } from '../pages/Curso/Curso';
+import { Login } from '../pages/Login/Login';
+import { Tarea } from '../pages/Tarea/Tarea';
+import { Tareas } from '../pages/Tareas/Tareas';
+import { tareas } from '../data/tareas';
 import { renderConRouter } from './utils';
 
 describe('Página Login', () => {

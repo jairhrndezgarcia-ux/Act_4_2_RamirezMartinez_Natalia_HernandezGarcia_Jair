@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import { TablaCalificaciones } from '../Components/TablaCalificaciones';
-import { TablaHorario } from '../Components/TablaHorario';
+import { TablaCalificaciones } from '../pages/Calificaciones/components/TablaCalificaciones';
+import { TablaHorario } from '../pages/Horario/components/TablaHorario';
 
 describe('TablaCalificaciones', () => {
   const materias = [

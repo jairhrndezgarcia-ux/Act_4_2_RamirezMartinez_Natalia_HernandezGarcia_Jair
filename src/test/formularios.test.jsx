@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { useState } from 'react';
 import { describe, expect, it, vi } from 'vitest';
-import { CampoContrasena, CampoTexto } from '../Components/CampoTexto';
-import { SelectorOpciones } from '../Components/SelectorOpciones';
+import { CampoContrasena, CampoTexto } from '../components/ui/CampoTexto';
+import { SelectorOpciones } from '../components/ui/SelectorOpciones';
 
 /** Envuelve un campo con estado propio para poder escribir en él. */
 function ConEstado({ Campo, ...props }) {

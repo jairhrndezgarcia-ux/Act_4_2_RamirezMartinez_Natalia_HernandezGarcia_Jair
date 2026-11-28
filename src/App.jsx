@@ -1,17 +1,17 @@
 import { BrowserRouter, Route, Routes } from 'react-router';
-import { TemaProvider } from './Context/TemaContext';
-import { MainLayout } from './Layout/MainLayout';
-import { Calificaciones } from './Pages/Calificaciones';
-import { Curso } from './Pages/Curso';
-import { Cursos } from './Pages/Cursos';
-import { EnConstruccion } from './Pages/EnConstruccion';
-import { Horario } from './Pages/Horario';
-import { Inicio } from './Pages/Inicio';
-import { InfoAcademica } from './Pages/InfoAcademica';
-import { Login } from './Pages/Login';
-import { Publicacion } from './Pages/Publicacion';
-import { Tarea } from './Pages/Tarea';
-import { Tareas } from './Pages/Tareas';
+import { TemaProvider } from './context/TemaContext';
+import { MainLayout } from './layouts/MainLayout';
+import { Calificaciones } from './pages/Calificaciones/Calificaciones';
+import { Curso } from './pages/Curso/Curso';
+import { Cursos } from './pages/Cursos/Cursos';
+import { EnConstruccion } from './pages/EnConstruccion/EnConstruccion';
+import { Horario } from './pages/Horario/Horario';
+import { Inicio } from './pages/Inicio/Inicio';
+import { InfoAcademica } from './pages/InfoAcademica/InfoAcademica';
+import { Login } from './pages/Login/Login';
+import { Publicacion } from './pages/Publicacion/Publicacion';
+import { Tarea } from './pages/Tarea/Tarea';
+import { Tareas } from './pages/Tareas/Tareas';
 
 /** Rutas del portal. Cada página se monta dentro de MainLayout. */
 const paginas = [

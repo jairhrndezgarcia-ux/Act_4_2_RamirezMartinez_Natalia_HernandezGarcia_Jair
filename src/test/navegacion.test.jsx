@@ -1,13 +1,13 @@
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it } from 'vitest';
-import { BotonTema } from '../Components/BotonTema';
-import { MenuMovil } from '../Components/MenuMovil';
-import { PanelNotificaciones } from '../Components/PanelNotificaciones';
-import { PestanasAcademicas } from '../Components/PestanasAcademicas';
-import { enlacesPrincipales } from '../Data/navegacion';
-import { notificaciones } from '../Data/notificaciones';
-import { seccionesAcademicas } from '../Data/alumno';
+import { BotonTema } from '../components/ui/BotonTema';
+import { MenuMovil } from '../components/layout/MenuMovil';
+import { PanelNotificaciones } from '../components/layout/PanelNotificaciones';
+import { PestanasAcademicas } from '../components/compartidos/PestanasAcademicas';
+import { enlacesPrincipales } from '../data/navegacion';
+import { notificaciones } from '../data/notificaciones';
+import { seccionesAcademicas } from '../data/alumno';
 import { renderConRouter } from './utils';
 
 describe('BotonTema', () => {

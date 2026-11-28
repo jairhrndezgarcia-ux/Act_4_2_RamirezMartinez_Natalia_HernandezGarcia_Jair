@@ -51,15 +51,23 @@ siguiendo las tres vistas del Figma (660, 980 y 1280 px).
 
 ```
 src/
-  Components/   Componentes reutilizables (uno por archivo)
-  Pages/        Páginas: arman componentes y datos
-  Layout/       MainLayout: barra superior + contenido + pie de página
-  Context/      TemaContext: modo claro/oscuro
-  Hooks/        useClicFuera: cerrar menús al hacer clic fuera o con Escape
-  Data/         Datos de ejemplo (alumno, cursos, tareas, horario…)
-  assets/icons/ Íconos exportados de Figma, en versión claro/ y oscuro/
-  test/         Pruebas con Vitest y Testing Library
+├── main.jsx            Punto de entrada
+├── App.jsx             Rutas
+├── index.css           Tema de Tailwind
+├── components/         SOLO componentes reutilizables
+│   ├── ui/             Piezas básicas (Icono, CampoTexto, Carrusel…)
+│   ├── layout/         Navbar, Footer, MenuMovil…
+│   └── compartidos/    Usados en 2+ páginas (TarjetaAlumno…)
+├── pages/              Una carpeta por pantalla
+│   └── Tareas/         Tareas.jsx + components/ propios de esa página
+├── layouts/            MainLayout
+├── context/            TemaContext
+├── hooks/              useClicFuera
+├── data/               Datos de ejemplo
+├── assets/icons/       Íconos de Figma
+└── test/               Pruebas con Vitest        Pruebas con Vitest y Testing Library
 ```
+
 
 ### Sistema de diseño
 
@@ -83,6 +91,7 @@ Fuentes: **Roboto** (textos) y **Roboto Mono** (logo y nombre del curso).
 El modo oscuro se activa con la clase `dark` en `<html>` y se aplica con la variante `dark:` de Tailwind.
 
 ## Componentes
+Los componentes reutilizables están en `src/components` (ui, layout y compartidos). Los que solo usa una página viven en `src/pages/<Página>/components`, junto a esa página.
 
 Cada componente está documentado con **JSDoc** en su archivo (propósito, props y comportamiento).
 Este es el resumen:
@@ -127,7 +136,7 @@ Este es el resumen:
 
 ### Cómo se integran
 
-Las **páginas** (`src/Pages`) toman los datos de `src/Data` y se los pasan a los componentes por *props*.
+Las **páginas** (`pages`) toman los datos de `src/data` y se los pasan a los componentes por *props*.
 `MainLayout` envuelve todas las páginas con `Navbar` y `Footer`, y `App.jsx` define las rutas. Por ejemplo,
 la página de Calificaciones es:
 
@@ -137,7 +146,7 @@ la página de Calificaciones es:
 <TablaCalificaciones materias={calificaciones} />
 ```
 
-Para conectar el portal a un servidor real solo habría que reemplazar los archivos de `src/Data`
+Para conectar el portal a un servidor real solo habría que reemplazar los archivos de `src/data`
 por llamadas a una API; los componentes no cambian.
 
 ## Pruebas

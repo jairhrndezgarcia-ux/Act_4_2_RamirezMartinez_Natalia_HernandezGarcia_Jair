@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router';
-import { TemaProvider } from '../Context/TemaContext';
+import { TemaProvider } from '../context/TemaContext';
 
 /**
  * Renderiza un elemento dentro del proveedor de tema y de un router en memoria.
